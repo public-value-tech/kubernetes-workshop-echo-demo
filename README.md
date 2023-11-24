@@ -19,7 +19,7 @@ kubectl apply -k .
 ## Build with docker
 
 ```bash
-docker build . -t europe-west3-docker.pkg.dev/swr-schulung-basic-1/swr-schulung-basic-1/echo-demo:latest
+docker build app -t europe-west3-docker.pkg.dev/swr-schulung-basic-1/swr-schulung-basic-1/echo-demo:latest
 docker push europe-west3-docker.pkg.dev/swr-schulung-basic-1/swr-schulung-basic-1/echo-demo:latest
 ```
 
