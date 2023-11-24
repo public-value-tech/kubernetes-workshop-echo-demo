@@ -1,4 +1,4 @@
-# kubernetes-workshop-nginx-demo
+# kubernetes-workshop-echo-demo
 
 deploy a demo application with built in config and with port 8081
 
