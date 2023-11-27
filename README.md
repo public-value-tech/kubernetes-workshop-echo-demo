@@ -4,6 +4,16 @@ deploy a demo application with built in config and with port 8081
 
 ## How to deploy
 
+### Automatically with sed
+
+Execute
+
+```bash
+sed -i "s/REPLACEME/$(whoami)/g" kustomization.yml ingress.yml
+```
+
+### Manually
+
 Search for all occurences of `echo-demo.s.pub-dev.tech`. Replace the `echo-demo` with a unique name.
 
 Do not change the `s.pub-dev.tech` part.
