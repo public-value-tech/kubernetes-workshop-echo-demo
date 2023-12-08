@@ -9,22 +9,28 @@ deploy a demo application with built in config and with port 8081
 Execute
 
 ```bash
-sed -i "s/REPLACEME/$(whoami)/g" kustomization.yml ingress.yml
+sed -i "s/REPLACEME/$(whoami | sed 's/_/-/g')/g" kustomization.yml ingress.yml
 ```
 
 ### Manually
 
-Search for all occurences of `echo-demo.s.pub-dev.tech`. Replace the `echo-demo` with a unique name.
+Search for all occurences of `REPLACEME`. Replace it with your account name, e.g. schulung-5.
 
-Do not change the `s.pub-dev.tech` part.
+### Apply 
 
-Change the namespace in the `kustomization.yaml` file to your namespace and run:
+Execute the following command to deploy the demo application to your namespace. 
 
 ```bash
 
 kubectl apply -k .
 
 ```
+
+### Checking health
+
+If there are no errors during apply, check the output of `kubectl get ingress` to verify that the Ingress has been created.
+
+Now you can browse to the shown address.
 
 ## Build with docker
 
