@@ -10,10 +10,10 @@ spec:
   ingressClassName: nginx
   tls:
     - hosts:
-        - echo-REPLACEME.s.pub-dev.tech
+        - echo-REPLACEME.a.pub-ws.de
       secretName: nginx-demo-tls
   rules:
-    - host: echo-REPLACEME.s.pub-dev.tech
+    - host: echo-REPLACEME.a.pub-ws.de
       http:
         paths:
           - path: /
